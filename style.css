@@ -1,0 +1,105 @@
+body {
+    background: rgb(14, 14, 14);
+    color: rgb(255, 255, 255);
+    font-family: 'Raleway', Helvetica, sans-serif;
+}
+
+.bodyContainer {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.buttonContainer {
+    text-align: center;
+    padding: 15px;
+}
+
+.header {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    /* text-decoration: underline; */
+    font-family: 'Rubik Mono One';
+    margin-bottom: 10px;
+}
+
+.buttonContainer > input {
+    padding: 7px;
+    font-size: 18px;
+}
+
+.buttonContainer > button {
+    padding: 10px;
+    border: 0px;
+    border-radius: 3px;
+    background: rgb(100, 0, 0);
+    color: white;
+    width: 100px;
+    margin-left: 10px;
+    font-size: 17px;
+    font-variant: small-caps;
+}
+
+.buttonContainer > button:hover {
+    color: grey;
+}
+
+.container {
+    padding: 10px;
+}
+
+.container > .lastAvailPrice {
+    margin-bottom: 20px;
+}
+
+.container > div {
+    margin: 5px;
+    font-size: 24px;
+}
+
+.priceContainer {
+    background: rgba(0, 0, 0, 0.404);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.priceContainer > div {
+    margin: 8px;
+}
+
+.tickerDoesNotExist {
+    text-align: center;
+}
+
+.green {
+    color: greenyellow;
+}
+
+.red {
+    color: red;
+}
+
+.centered {
+    text-align: center;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+::-moz-selection {
+    color: rgb(255, 255, 255);
+    background: rgb(88, 0, 0);
+}
+
+::selection {
+    color: rgb(255, 255, 255);
+    background: rgb(88, 0, 0);
+}
+
+.addPadding {
+    padding: 5px;
+}

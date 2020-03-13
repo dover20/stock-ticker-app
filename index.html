@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Symbol Lookup</title>
+</head>
+<body>
+    <div class="bodyContainer">
+        <div class="buttonContainer">
+            <div class="header">Ticker symbol lookup</div>
+            <input id="ticker" type="text" placeholder="ex. AAPL">
+            <button onClick="stockTicker()">Enter</button>
+        </div>
+    
+        <div class="container">
+            <div class="tickerDoesNotExist"></div>
+            <div class="tickerText clear"></div>
+            <div class="stockName clear"></div>
+            <div class="lastAvailPrice clear"></div>
+            
+            <div class="priceContainer">
+                <div class="openPrice clear"></div>
+                <div class="lowPrice clear"></div>
+                <div class="highPrice clear"></div>
+                <div class="closePrice clear"></div>
+                
+                <div class="volume clear"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
