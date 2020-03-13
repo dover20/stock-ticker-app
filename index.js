@@ -1,6 +1,3 @@
-//jshint -W119
-//jshint -W104
-
 function stockTicker() {
 
     let ticker = document.getElementById('ticker').value;
@@ -28,6 +25,19 @@ function stockTicker() {
                 lowPrice = Number( lowPrice ).toFixed(2);
                 highPrice = Number( highPrice ).toFixed(2);
                 closePrice = Number( closePrice ).toFixed(2);
+
+                //Convert date from UTC to a nice looking date
+                let dateConversionObject = new Date(lastRefresh);
+                let month = dateConversionObject.toLocaleString('default', { month: 'long' });
+                let day = dateConversionObject.getUTCDate();
+                let year = dateConversionObject.getUTCFullYear();
+                let UTCHour = dateConversionObject.getHours();
+                let suffix = (UTCHour >= 12) ? " PM" : " AM";
+                let hour = (( dateConversionObject.getHours() + 11) % 12 + 1);
+                let minute = dateConversionObject.getMinutes();
+                //Add zero to minutes if minutes equals 0
+                let addZero = (minute === 0) ? "0" : "";
+                let fullDate = month + ", " + day + ", " + year + " " + hour + ":" + minute + addZero + suffix;
     
                 document.querySelector('.tickerText').innerHTML = "Ticker: " + `<span class="red bold">${tickerName}</span>`;
 
@@ -41,7 +51,7 @@ function stockTicker() {
                 document.querySelector('.priceContainer').classList.add('addPadding');
     
                 document.querySelector('.lastAvailPrice').innerHTML = "Last available price: " + 
-                `<span class="green">${lastRefresh}</span`;
+                `<span class="green">${fullDate}</span`;
     
                 document.querySelector('.openPrice').innerHTML = "Open price: " + 
                 `<span class='green'> $${openPrice} </span>`;
@@ -61,8 +71,6 @@ function stockTicker() {
                     } else {
                         document.querySelector('.volume').innerHTML = "";
                     }
-
-                //console.log(data);
 
             } else {
                 document.querySelector('.priceContainer').classList.remove('addPadding');
