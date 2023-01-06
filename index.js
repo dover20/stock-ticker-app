@@ -37,7 +37,7 @@ function stockTicker() {
                 let minute = dateConversionObject.getMinutes();
                 //Add zero to minutes if minutes equals 0
                 let addZero = (minute === 0) ? "0" : "";
-                let fullDate = month + ", " + day + ", " + year + " " + hour + ":" + minute + addZero + suffix;
+                let fullDate = month + " " + day + ", " + year + " " + hour + ":" + minute + addZero + suffix;
     
                 document.querySelector('.tickerText').innerHTML = "Ticker: " + `<span class="red bold">${tickerName}</span>`;
 
